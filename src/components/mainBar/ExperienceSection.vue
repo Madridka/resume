@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import type { Experience } from '@/types/resume'
-import ExperienceItem from './ExperienceItem.vue'
-import ResumeSection from './ResumeSection.vue'
+
+import ExperienceItem from '@/components/mainBar/ExperienceItem.vue'
+import ResumeSection from '@/components/ResumeSection.vue'
 
 defineProps<{ experience: Experience[] }>()
 </script>

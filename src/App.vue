@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import ResumeLayout from '@/components/resume/ResumeLayout.vue'
 import { resumeData } from '@/data/resume'
+
+import ResumeLayout from '@/components/ResumeLayout.vue'
 </script>
 
 <template>

@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import type { Contact, Language, SkillGroup } from '@/types/resume'
-import ContactList from './ContactList.vue'
-import LanguagesSection from './LanguagesSection.vue'
-import SkillsSection from './SkillsSection.vue'
+
+import ContactList from '@/components/sideBar/ContactList.vue'
+import LanguagesSection from '@/components/sideBar/LanguagesSection.vue'
+import SkillsSection from '@/components/sideBar/SkillsSection.vue'
 
 defineProps<{
   contacts: Contact[]

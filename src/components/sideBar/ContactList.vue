@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import type { Contact } from '@/types/resume'
-import ContactItem from './ContactItem.vue'
-import ResumeSection from './ResumeSection.vue'
+
+import ContactItem from '@/components/sideBar/ContactItem.vue'
+import ResumeSection from '@/components/ResumeSection.vue'
 
 defineProps<{ contacts: Contact[] }>()
 </script>

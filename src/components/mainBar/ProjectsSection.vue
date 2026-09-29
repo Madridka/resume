@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import type { Project } from '@/types/resume'
-import ProjectItem from './ProjectItem.vue'
-import ResumeSection from './ResumeSection.vue'
+
+import ProjectItem from '@/components/mainBar/ProjectItem.vue'
+import ResumeSection from '@/components/ResumeSection.vue'
 
 defineProps<{ projects: Project[] }>()
 </script>

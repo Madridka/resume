@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import type { Education } from '@/types/resume'
-import EducationItem from './EducationItem.vue'
-import ResumeSection from './ResumeSection.vue'
+
+import EducationItem from '@/components/mainBar/EducationItem.vue'
+import ResumeSection from '@/components/ResumeSection.vue'
 
 defineProps<{ education: Education[] }>()
 </script>

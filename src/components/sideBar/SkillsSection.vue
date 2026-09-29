@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import type { SkillGroup as SkillGroupData } from '@/types/resume'
-import ResumeSection from './ResumeSection.vue'
-import SkillGroup from './SkillGroup.vue'
+
+import ResumeSection from '@/components/ResumeSection.vue'
+import SkillGroup from '@/components/sideBar/SkillGroup.vue'
 
 defineProps<{ skills: SkillGroupData[] }>()
 </script>
