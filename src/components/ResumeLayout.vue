@@ -1,14 +1,10 @@
 <script setup lang="ts">
-import type { ResumeData } from '@/types/resume'
-
 import ResumeHeader from '@/components/header/ResumeHeader.vue'
 import AboutSection from '@/components/mainBar/AboutSection.vue'
 import EducationSection from '@/components/mainBar/EducationSection.vue'
 import ExperienceSection from '@/components/mainBar/ExperienceSection.vue'
 import ProjectsSection from '@/components/mainBar/ProjectsSection.vue'
 import ResumeSidebar from '@/components/sideBar/ResumeSidebar.vue'
-
-defineProps<{ resume: ResumeData }>()
 </script>
 
 <template>
@@ -24,28 +20,22 @@ defineProps<{ resume: ResumeData }>()
       class="resume-sheet mx-auto max-w-[1120px] border-y border-slate-200 bg-white sm:border"
       aria-label="Резюме"
     >
-      <ResumeHeader :profile="resume.profile" />
+      <ResumeHeader />
       <!-- Mobile sections interleave without duplicating the resume content. -->
       <div
         class="resume-body flex flex-col gap-9 px-6 py-8 sm:px-10 sm:py-10 md:grid md:grid-cols-[minmax(0,0.29fr)_minmax(0,0.71fr)] md:items-start md:gap-0 lg:px-12"
       >
-        <ResumeSidebar
-          :contacts="resume.contacts"
-          :skills="resume.skills"
-          :languages="resume.languages"
-          class="md:pr-6 lg:pr-8"
-        />
+        <ResumeSidebar class="md:pr-6 lg:pr-8" />
         <div
           class="resume-main contents md:block md:space-y-9 md:border-l md:border-slate-200 md:pl-7 lg:pl-10"
         >
           <AboutSection
-            :paragraphs="resume.profile.summary"
             tabindex="-1"
             class="order-2 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-teal-700"
           />
-          <ExperienceSection :experience="resume.experience" class="order-4" />
-          <ProjectsSection :projects="resume.projects" class="order-5" />
-          <EducationSection :education="resume.education" class="order-6" />
+          <ExperienceSection class="order-4" />
+          <ProjectsSection class="order-5" />
+          <EducationSection class="order-6" />
         </div>
       </div>
     </main>

@@ -1,12 +1,3 @@
-export interface Profile {
-  name: string
-  title: string
-  specialization: string
-  location: string
-  photoAlt: string
-  summary: string[]
-}
-
 export interface Contact {
   id: string
   kind: 'phone' | 'email' | 'telegram' | 'github'
@@ -50,14 +41,4 @@ export interface Project {
   name: string
   description: string
   stack: string[]
-}
-
-export interface ResumeData {
-  profile: Profile
-  contacts: Contact[]
-  skills: SkillGroup[]
-  languages: Language[]
-  experience: Experience[]
-  education: Education[]
-  projects: Project[]
 }

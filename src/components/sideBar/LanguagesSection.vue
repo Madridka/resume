@@ -3,7 +3,11 @@ import type { Language } from '@/types/resume'
 
 import ResumeSection from '@/components/ResumeSection.vue'
 
-defineProps<{ languages: Language[] }>()
+const languages: Language[] = [
+  { name: 'Русский', level: 'Родной' },
+  { name: 'Английский', level: 'B1' },
+  { name: 'Немецкий', level: 'A1' },
+]
 </script>
 
 <template>

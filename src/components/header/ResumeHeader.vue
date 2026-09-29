@@ -1,10 +1,15 @@
 <script setup lang="ts">
-import type { Profile } from '@/types/resume'
 import photoUrl from '@/../photo/photo.png'
 
 import ResumeIcon from '@/components/ui/ResumeIcon.vue'
 
-defineProps<{ profile: Profile }>()
+const profile = {
+  name: 'Кирилл Сербин',
+  title: 'Frontend Developer',
+  specialization: 'Vue 3 / TypeScript',
+  location: 'Томск',
+  photoAlt: 'Кирилл Сербин',
+}
 </script>
 
 <template>
