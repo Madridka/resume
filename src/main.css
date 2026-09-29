@@ -1,0 +1,197 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    color-scheme: light;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+  }
+
+  ::selection {
+    background: #d9e9e4;
+    color: #173d35;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 12mm;
+}
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    transition: none !important;
+  }
+
+  html,
+  body,
+  .resume-page,
+  .resume-sheet {
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: #1e293b;
+  }
+
+  .resume-sheet {
+    max-width: none;
+    border: 0;
+  }
+
+  .resume-header {
+    padding: 0 0 5mm;
+    margin-bottom: 5mm;
+    break-inside: avoid;
+  }
+
+  .resume-header h1 {
+    font-size: 26pt;
+  }
+
+  .resume-header p {
+    margin-top: 2mm;
+  }
+
+  .resume-photo {
+    width: 23mm;
+    height: 29mm;
+  }
+
+  /* Block flow lets content paginate independently of the screen grid. */
+  .resume-body {
+    display: block;
+    padding: 0;
+  }
+
+  .resume-sidebar {
+    display: block;
+    float: left;
+    width: 28%;
+    padding: 0 5mm 0 0;
+  }
+
+  .resume-main {
+    display: block;
+    margin-left: 28%;
+    padding-left: 6mm;
+    border-left: 1px solid #cbd5e1;
+  }
+
+  .resume-sheet::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+
+  .resume-body section {
+    margin: 0 0 5mm;
+  }
+
+  .resume-body h2 {
+    margin-bottom: 3mm;
+    padding-bottom: 2mm;
+    font-size: 8pt;
+    line-height: 1.4;
+    letter-spacing: 0.12em;
+    break-after: avoid;
+  }
+
+  .resume-body h3 {
+    font-size: 10pt;
+    line-height: 1.4;
+    break-after: avoid;
+  }
+
+  .resume-body p,
+  .resume-body li,
+  .resume-body dl {
+    font-size: 9.5pt;
+    line-height: 1.45;
+  }
+
+  .resume-body p,
+  .resume-body li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  #about p + p {
+    margin-top: 2mm;
+  }
+
+  #skills > div,
+  #contacts ul {
+    display: block;
+  }
+
+  .skill-group {
+    margin-bottom: 4mm;
+  }
+
+  .skill-group li,
+  .skill-group p,
+  .resume-body .tech-stack {
+    font-size: 8pt;
+  }
+
+  #contacts a {
+    min-height: 0;
+    padding: 1.5mm 0;
+    gap: 2mm;
+    color: #1e293b;
+    text-decoration: none;
+  }
+
+  #contacts a span span:last-child {
+    font-size: 8pt;
+    line-height: 1.4;
+  }
+
+  #contacts a span span:first-child {
+    font-size: 7pt;
+  }
+
+  #contacts a:hover,
+  #contacts a:hover span,
+  #contacts a:hover svg {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .experience-item,
+  .project-item,
+  .education-item,
+  .skill-group,
+  #languages {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .experience-item ul,
+  .resume-body .tech-stack {
+    margin-top: 2mm;
+  }
+
+  .experience-item li {
+    margin-bottom: 1mm;
+  }
+
+  .resume-body article {
+    margin-block: 0;
+  }
+
+  .resume-body article + article {
+    margin-top: 4mm;
+    padding-top: 4mm;
+  }
+}
