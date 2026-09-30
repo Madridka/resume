@@ -30,9 +30,10 @@ const projects: Project[] = [
   },
   {
     id: 'ai-helpers',
-    name: 'AI Helpers & Automation',
-    description: 'Telegram-боты, автоматизация, интеграции с AI API и вспомогательные скрипты.',
-    stack: ['Python', 'Telegram API', 'asyncio', 'REST API', 'AI API'],
+    name: 'AI-хелперы и автоматизация рутины',
+    description:
+      'Telegram-боты, автоматизация, интеграции с AI API и вспомогательные скрипты (в т.ч. заказы на фрилансе).',
+    stack: ['Python', 'Telegram API', 'asyncio', 'REST API', 'AI API и пр.'],
   },
 ]
 </script>

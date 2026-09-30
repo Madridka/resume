@@ -7,13 +7,13 @@ import ResumeSection from '@/components/ResumeSection.vue'
 const education: Education[] = [
   {
     id: 'asap-education',
-    institution: 'ASAP Education',
+    institution: 'ASAP Education, курс',
     period: '02/2025 — 07/2025',
-    qualification: 'Курс «Frontend-разработчик»',
+    qualification: '«Frontend-разработчик»',
   },
   {
     id: 'tomsk-polytechnic-university',
-    institution: 'Томский политехнический университет',
+    institution: 'Томский политехнический университет, высшее',
     period: '2012 — 2016',
     qualification: 'Институт природных ресурсов',
   },

@@ -7,7 +7,6 @@ const profile = {
   name: 'Кирилл Сербин',
   title: 'Frontend Developer',
   specialization: 'Vue 3 / TypeScript',
-  location: 'Томск',
   photoAlt: 'Кирилл Сербин',
 }
 </script>
@@ -32,10 +31,6 @@ const profile = {
       </p>
       <p class="mt-2 font-mono text-[13px] leading-6 text-teal-800 sm:text-sm">
         {{ profile.specialization }}
-      </p>
-      <p class="mt-4 flex items-center gap-1.5 text-xs leading-5 text-slate-500">
-        <ResumeIcon name="location" class="size-3.5" />
-        {{ profile.location }}
       </p>
     </div>
     <img

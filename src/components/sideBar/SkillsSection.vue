@@ -8,15 +8,7 @@ const skills: SkillGroupData[] = [
   {
     id: 'frontend',
     title: 'Frontend',
-    items: [
-      'Vue 3',
-      'Composition API',
-      'Vue 2',
-      'TypeScript',
-      'JavaScript',
-      'Pinia',
-      'PrimeVue',
-    ],
+    items: ['Vue 3', 'Composition API', 'Vue 2', 'TypeScript', 'JavaScript', 'Pinia', 'PrimeVue'],
   },
   {
     id: 'ui-styling',
@@ -27,7 +19,7 @@ const skills: SkillGroupData[] = [
   {
     id: 'backend',
     title: 'Backend',
-    items: ['Go — базовый', 'Чтение кода', 'Debug API'],
+    items: ['Go — базовый', 'Чтение кода', 'Debug API', 'Dexie / IndexedDB', 'Fastify', 'SQLite'],
   },
   {
     id: 'development',
