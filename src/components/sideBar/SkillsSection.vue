@@ -15,44 +15,31 @@ const skills: SkillGroupData[] = [
       'TypeScript',
       'JavaScript',
       'Pinia',
-      'Vue Router',
       'PrimeVue',
     ],
   },
   {
     id: 'ui-styling',
     title: 'UI / Styling',
-    items: ['Tailwind CSS', 'SCSS', 'Responsive UI', 'Component-based UI', 'Figma'],
+    items: ['Tailwind CSS', 'SCSS', 'Responsive UI', 'Figma'],
   },
-  { id: 'api', title: 'API', items: ['REST API', 'Axios', 'Client-server integration'] },
+  { id: 'api', title: 'API', items: ['REST API', 'Axios'] },
   {
     id: 'backend',
     title: 'Backend',
-    items: ['Go — базовый уровень', 'Чтение backend-кода', 'Debug API', 'Небольшие изменения'],
+    items: ['Go — базовый', 'Чтение кода', 'Debug API'],
   },
   {
     id: 'development',
     title: 'Development',
-    items: ['Git', 'GitLab', 'GitFlow', 'Merge Requests', 'Code Review', 'CI/CD', 'Vite'],
-  },
-  {
-    id: 'ai-assisted-development',
-    title: 'AI-assisted development',
-    items: [
-      'AI coding agents',
-      'Task decomposition',
-      'Generated code review',
-      'Solution verification',
-      'Refactoring',
-    ],
-    note: 'AI-агенты — инструмент разработки. Проверяю архитектуру, типы, граничные случаи и соответствие изменений требованиям; ответственность за техническое решение остаётся на мне.',
+    items: ['Git', 'GitLab', 'GitFlow', 'Code Review', 'CI/CD', 'Vite'],
   },
 ]
 </script>
 
 <template>
   <ResumeSection id="skills" title="Технический стек">
-    <div class="grid gap-5 min-[540px]:grid-cols-2 md:grid-cols-1">
+    <div class="grid gap-4 min-[540px]:grid-cols-2 md:grid-cols-1">
       <SkillGroup v-for="group in skills" :key="group.id" :group="group" />
     </div>
   </ResumeSection>

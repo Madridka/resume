@@ -12,7 +12,7 @@ const languages: Language[] = [
 
 <template>
   <ResumeSection id="languages" title="Языки" class="break-inside-avoid">
-    <dl class="space-y-2.5 text-sm leading-5">
+    <dl class="space-y-1.5 text-sm leading-5">
       <div
         v-for="language in languages"
         :key="language.name"

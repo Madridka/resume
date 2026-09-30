@@ -19,10 +19,10 @@ defineProps<{ experience: Experience }>()
         {{ experience.period }}
       </p>
     </div>
-    <p class="mt-2 text-sm leading-6 font-medium text-teal-800">{{ experience.role }}</p>
-    <p class="mt-3 text-sm leading-[1.8] text-slate-600">{{ experience.description }}</p>
+    <p class="mt-1.5 text-sm leading-6 font-medium text-teal-800">{{ experience.role }}</p>
+    <p class="mt-2 text-sm leading-[1.65] text-slate-600">{{ experience.description }}</p>
     <ul
-      class="mt-4 list-disc space-y-2 pl-4 text-sm leading-[1.8] text-slate-700 marker:text-slate-400"
+      class="mt-3 list-disc space-y-1.5 pl-4 text-sm leading-[1.65] text-slate-700 marker:text-slate-400"
     >
       <li v-for="responsibility in experience.responsibilities" :key="responsibility" class="pl-1">
         {{ responsibility }}

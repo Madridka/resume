@@ -14,7 +14,7 @@ defineProps<{ project: Project }>()
     >
       {{ project.name }}
     </h3>
-    <p class="mt-2 text-sm leading-[1.8] text-slate-600">{{ project.description }}</p>
-    <TechStack :items="project.stack" />
+    <p class="mt-1.5 text-sm leading-[1.65] text-slate-600">{{ project.description }}</p>
+    <TechStack class="project-stack" :items="project.stack" />
   </article>
 </template>

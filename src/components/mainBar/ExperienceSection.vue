@@ -8,66 +8,49 @@ const experience: Experience[] = [
   {
     id: 'sibneftecart',
     company: 'ООО «Сибнефтекарт»',
-    role: 'Инженер-программист / Frontend Developer',
-    period: '06/2025 — настоящее время',
+    role: 'Frontend-разработчик',
+    period: '06/2025 — н. в.',
     description:
-      'Разработка и развитие личного кабинета для держателей топливных карт и программных решений для автоматизации АЗС и нефтебаз.',
+      'Личный кабинет топливных карт и системы автоматизации АЗС и нефтебаз.',
     responsibilities: [
-      'Самостоятельно разрабатываю модули на Vue 3, Composition API и TypeScript: от структуры компонентов до интеграции с backend API.',
-      'Поддерживаю Vue 2 и участвую в поэтапной миграции на Vue 3 с сохранением бизнес-логики.',
-      'Проектирую компоненты и composables, устраняю дублирование. В Pinia типизирую state/getters/actions, разделяю локальное и глобальное состояние.',
-      'Интегрирую REST API через Axios: авторизация, ошибки, серверная валидация и асинхронные UI-состояния. Согласовываю контракты с backend-командой.',
-      'Создаю формы, таблицы, фильтры и пошаговые сценарии; адаптирую PrimeVue. Развиваю отчётность: диапазоны дат, большие наборы данных, визуализация и экспорт.',
-      'Читаю смежный код на Go, диагностирую ошибки клиент-серверного взаимодействия и вношу небольшие изменения в API.',
-      'Применяю AI-агентов для декомпозиции и рефакторинга; проверяю сгенерированный код, архитектуру, типы, граничные случаи и соответствие требованиям.',
-      'Работаю через GitLab: feature branches, merge requests, code review и CI/CD pipelines.',
+      'Разрабатываю модули, компоненты и composables на Vue 3, TypeScript и Pinia.',
+      'Поддерживаю Vue 2 и переношу функциональность на Vue 3 без изменения бизнес-логики.',
+      'Интегрирую REST API; создаю формы, таблицы, фильтры, отчёты и экспорт данных.',
+      'Диагностирую frontend/API-ошибки, читаю и точечно изменяю Go-код; участвую в code review и CI/CD.',
     ],
     stack: [
       'Vue 3',
-      'Composition API',
-      'Vue 2',
       'TypeScript',
       'Pinia',
-      'Vue Router',
       'PrimeVue',
       'Tailwind CSS',
-      'SCSS',
       'Axios',
       'REST API',
       'Go',
       'GitLab',
-      'CI/CD',
     ],
   },
   {
     id: 'gazprom-transgaz-project',
     company: 'Проект для ООО «Газпром трансгаз Томск»',
-    role: 'Frontend Developer',
+    role: 'Frontend-разработчик',
     period: '02/2025 — 06/2025',
     description:
-      'Внутренняя система контроля сроков обучения и аттестации производственного персонала.',
+      'Система контроля обучения и аттестации производственного персонала.',
     responsibilities: [
-      'Разрабатывал с нуля клиентскую часть системы на Vue 3, Composition API и JavaScript.',
-      'Создавал собственные переиспользуемые UI-компоненты для форм, таблиц и навигации по макетам и UI Kit в Figma без готовой компонентной библиотеки.',
-      'Интегрировал frontend с backend API и согласовывал контракты с backend-разработчиком.',
-      'Работал в кросс-функциональной команде с Project Manager, аналитиком, UI/UX-дизайнером и backend-разработчиком; участвовал в спринтах, daily, planning и retrospective.',
-      'Участвовал в обсуждении требований и демонстрациях продукта, дорабатывал функциональность по обратной связи заказчика.',
-      'Вносил frontend-изменения в административную часть на PHP/Laravel и дорабатывал её интерфейсы.',
-      'Работал по GitFlow: feature branches, merge requests и code review.',
-      'За три месяца команда разработала с нуля и передала заказчику работоспособный MVP системы.',
+      'С нуля разработал frontend на Vue 3 и JavaScript, включая UI-компоненты по макетам Figma.',
+      'Интегрировал API и дорабатывал интерфейсы административной части на PHP/Laravel.',
+      'Работал в кросс-функциональной команде по GitFlow; MVP передан заказчику за три месяца.',
     ],
     stack: [
       'Vue 3',
-      'Composition API',
       'JavaScript',
-      'Vue Router',
       'SCSS',
       'Axios',
       'REST API',
       'Figma',
       'GitLab',
-      'GitFlow',
-      'PHP/Laravel — frontend админки',
+      'PHP/Laravel',
     ],
   },
 ]
@@ -75,7 +58,7 @@ const experience: Experience[] = [
 
 <template>
   <ResumeSection id="experience" title="Опыт работы">
-    <div class="space-y-7 divide-y divide-slate-200 [&>article:not(:first-child)]:pt-7">
+    <div class="space-y-5 divide-y divide-slate-200 [&>article:not(:first-child)]:pt-5">
       <ExperienceItem v-for="item in experience" :key="item.id" :experience="item" />
     </div>
   </ResumeSection>
