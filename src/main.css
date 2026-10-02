@@ -23,6 +23,10 @@
 }
 
 @media print {
+  .resume-actions {
+    display: none !important;
+  }
+
   *,
   *::before,
   *::after {

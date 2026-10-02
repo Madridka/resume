@@ -1,14 +1,9 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
 import photoUrl from '@/../photo/photo.png'
 
-import ResumeIcon from '@/components/ui/ResumeIcon.vue'
-
-const profile = {
-  name: 'Кирилл Сербин',
-  title: 'Frontend Developer',
-  specialization: 'Vue 3 / TypeScript',
-  photoAlt: 'Кирилл Сербин',
-}
+const { t } = useI18n()
 </script>
 
 <template>
@@ -19,23 +14,23 @@ const profile = {
       <p
         class="mb-3 text-[10px] leading-5 font-medium tracking-[0.2em] text-slate-500 uppercase print:hidden"
       >
-        Резюме
+        {{ t('profile.eyebrow') }}
       </p>
       <h1
         class="text-[30px] leading-[1.12] font-semibold tracking-[-0.035em] text-slate-950 sm:text-[42px]"
       >
-        {{ profile.name }}
+        {{ t('profile.name') }}
       </h1>
       <p class="mt-3 text-base leading-snug font-medium text-slate-800 sm:text-xl">
-        {{ profile.title }}
+        {{ t('profile.title') }}
       </p>
       <p class="mt-2 font-mono text-[13px] leading-6 text-teal-800 sm:text-sm">
-        {{ profile.specialization }}
+        {{ t('profile.specialization') }}
       </p>
     </div>
     <img
       :src="photoUrl"
-      :alt="profile.photoAlt"
+      :alt="t('profile.photoAlt')"
       width="108"
       height="136"
       fetchpriority="high"

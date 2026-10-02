@@ -1,47 +1,33 @@
 <script setup lang="ts">
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import type { Project } from '@/types/resume'
 
-import ProjectItem from '@/components/mainBar/ProjectItem.vue'
 import ResumeSection from '@/components/ResumeSection.vue'
+import TechStack from '@/components/sideBar/TechStack.vue'
 
-const projects: Project[] = [
-  {
-    id: 'vkleika',
-    name: 'Вклейка',
-    description:
-      'Коллекционная футбольная web-игра: альбомы, карточки, мини-игры, аккаунты и синхронизация прогресса.',
-    stack: [
-      'Vue 3',
-      'TypeScript',
-      'Pinia',
-      'Tailwind CSS',
-      'Dexie / IndexedDB',
-      'Fastify',
-      'SQLite',
-      'Vitest',
-    ],
-  },
-  {
-    id: 'fm-simulator',
-    name: 'FM Simulator',
-    description:
-      'Футбольный менеджер с карьерой, симуляцией матчей, трансферами и фоновыми расчётами в Web Worker.',
-    stack: ['Vue 3', 'TypeScript', 'Pinia', 'Tailwind CSS', 'Vitest', 'Web Workers'],
-  },
-  {
-    id: 'ai-helpers',
-    name: 'AI-хелперы и автоматизация рутины',
-    description:
-      'Telegram-боты, автоматизация, интеграции с AI API и вспомогательные скрипты (в т.ч. заказы на фрилансе).',
-    stack: ['Python', 'Telegram API', 'asyncio', 'REST API', 'AI API и пр.'],
-  },
-]
+const { t, tm } = useI18n()
+const projects = computed((): Project[] => tm('projects') as unknown as Project[])
 </script>
 
 <template>
-  <ResumeSection id="projects" title="Pet-проекты">
+  <ResumeSection id="projects" :title="t('sections.projects')">
     <div class="space-y-4 divide-y divide-slate-200 [&>article:not(:first-child)]:pt-4">
-      <ProjectItem v-for="project in projects" :key="project.id" :project="project" />
+      <article
+        v-for="project in projects"
+        :key="project.id"
+        :aria-labelledby="`${project.id}-title`"
+        class="project-item break-inside-avoid"
+      >
+        <h3
+          :id="`${project.id}-title`"
+          class="text-[15px] leading-6 font-semibold tracking-[-0.01em] text-slate-950"
+        >
+          {{ project.name }}
+        </h3>
+        <p class="mt-1.5 text-sm leading-[1.65] text-slate-600">{{ project.description }}</p>
+        <TechStack class="project-stack" :items="project.stack" />
+      </article>
     </div>
   </ResumeSection>
 </template>

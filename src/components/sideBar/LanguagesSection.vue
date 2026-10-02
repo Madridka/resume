@@ -1,17 +1,16 @@
 <script setup lang="ts">
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import type { Language } from '@/types/resume'
 
 import ResumeSection from '@/components/ResumeSection.vue'
 
-const languages: Language[] = [
-  { name: 'Русский', level: 'Родной' },
-  { name: 'Английский', level: 'B1' },
-  { name: 'Немецкий', level: 'A1' },
-]
+const { t, tm } = useI18n()
+const languages = computed((): Language[] => tm('languages') as unknown as Language[])
 </script>
 
 <template>
-  <ResumeSection id="languages" title="Языки" class="break-inside-avoid">
+  <ResumeSection id="languages" :title="t('sections.languages')" class="break-inside-avoid">
     <dl class="space-y-1.5 text-sm leading-5">
       <div
         v-for="language in languages"
